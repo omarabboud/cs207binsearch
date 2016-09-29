@@ -11,5 +11,5 @@ def test_char():
     
 def test_zero_value():
     with raises(ValueError):
-        binary_search([])
+        binary_search([0,0])
         
