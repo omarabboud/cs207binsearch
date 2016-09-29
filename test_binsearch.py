@@ -19,3 +19,7 @@ def index_len():
 def int_char():
     with raises(TypeError):
         binary_search([1,3,5,8],3,'a')
+    
+def int_order():
+    with raises(ValueError):
+        binary_search([1,3,5,8],3,1)
