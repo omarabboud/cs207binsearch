@@ -6,10 +6,15 @@ def test_notthere():
     assert binary_search([1, 3, 5],2) == -1
 
 def test_there():
-    assert binary_search([1, 3, 5],3) == 0
+    assert binary_search([1, 3, 5],3) == 1
 
-def test_there():
-    assert binary_search([1, 3, 5],3) == 0
+def array_len():
+    with raises(ValueError):
+        binary_search([],3)
+        
+def index_len():
+    with raises(ValueError):
+        binary_search([1,3,5])
     
 def int_char():
     with raises(TypeError):
