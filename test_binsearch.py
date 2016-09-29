@@ -1,5 +1,4 @@
 
-from pytest import raises
 import unittest
 from binsearch import binary_search
 
