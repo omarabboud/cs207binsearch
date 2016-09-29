@@ -1,17 +1,16 @@
 
-import unittest
+from pytest import raises
 from binsearch import binary_search
 
-class MathTest(unittest.TestCase):
+def test_notthere():
+    assert binary_search([1, 3, 5],2) == -1
+
+def test_there():
+    assert binary_search([1, 3, 5],3) == 0
+
+def test_there():
+    assert binary_search([1, 3, 5],3) == 0
     
-    def noindex(self):
-        data = [1, 3, 5]
-        self.assertEqual(binary_search(data, 3), 3, 'No index.')
-
-    def novalue(self):
-        data = [1, 3, 5]
-        self.assertEqual(binary_search(collection, 299), 'Its not in the tree.', 'Its not in the tree.')
-
-if __name__ == '__main__':
-    unittest.main()
-        
+def int_char():
+    with raises(TypeError):
+        binary_search([1,3,5,8],3,'a')
